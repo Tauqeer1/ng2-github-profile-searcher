@@ -8,12 +8,13 @@ import { GithubService } from './services';
 
 //Components
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './components';
+import { ProfileComponent, SearchComponent } from './components';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent
+    ProfileComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
