@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 export class SearchComponent {
 
     term$: BehaviorSubject<string> = new BehaviorSubject("");
-    constructor(private _githubService: GithubService) { 
+    constructor(private _githubService: GithubService) {
         this.term$
             .debounceTime(1000)
             .distinctUntilChanged()
@@ -18,6 +18,6 @@ export class SearchComponent {
                 this._githubService.getUser(term);
                 this._githubService.getRepos(term);
             })
-        
+
     }
 }

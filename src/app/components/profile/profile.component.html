@@ -1,4 +1,4 @@
-<div *ngIf="user">
+<div *ngIf="user['login']">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">{{user['name']}}</h3>
@@ -49,6 +49,6 @@
         </div>
     </div>
 </div>
-<div *ngIf="!user">
-    No User
+<div *ngIf="!user['login']">
+    Enter in searchbox to search the user
 </div>
