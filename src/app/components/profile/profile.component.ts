@@ -14,16 +14,11 @@ export class ProfileComponent {
     user: Object;
     repos: Array<Object>;
     constructor(private _githubSerice: GithubService) {
-        this._githubSerice.getUser()
-            .subscribe(user => {
-                console.log('user', user);
-                this.user = user;
-            });
-        
-        this._githubSerice.getRepos()
-            .subscribe(repos => {
-                console.log('repos', repos);
-                this.repos = repos;
-            })
+        this._githubSerice.user$.subscribe(user => {
+            this.user = user;
+        })
+        this._githubSerice.repos$.subscribe(repos => {
+            this.repos = repos;
+        })
     }
 }
