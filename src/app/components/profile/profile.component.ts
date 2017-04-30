@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 })
 
 export class ProfileComponent {
-    
+
     user: Object;
     repos: Array<Object>;
     constructor(private _githubSerice: GithubService) {
